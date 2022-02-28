@@ -4,14 +4,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shutter</title>
+  <title>Show</title>
 </head>
 <body>
-  <h1>all Shutters</h1>
-    <ul>
-      <% for (let shutter of shutters) {%>
-        <li><a href="/shutter/<%= shutter._id %>"><%= shutter.title %></a></li>
-      <% } %>
-    </ul>
+  <h1><%= shutter.title %></h1>
+  <h2><%= shutter.location %></h2>
 </body>
 </html>

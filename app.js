@@ -15,4 +15,9 @@ app.get('/shutter', async (req, res) => {
   res.render('shutter/index', { shutters })
 })
 
+app.get('/shutter/:id', async(req, res) => {
+  const shutter = await Shutter.findById(req.params.id)
+  res.render('shutter/show', { shutter })
+})
+
 module.exports = app
