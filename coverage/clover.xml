@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1646055260272" clover="3.2.0">
-  <project timestamp="1646055260272" name="All files">
+<coverage generated="1646055478563" clover="3.2.0">
+  <project timestamp="1646055478563" name="All files">
     <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0" elements="10" coveredelements="10" complexity="0" loc="10" ncloc="10" packages="1" files="1" classes="1"/>
     <file name="shutter.js" path="/Users/yohann/Documents/JS-projects/shutter-express/models/shutter.js">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>

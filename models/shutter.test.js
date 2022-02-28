@@ -19,7 +19,7 @@ describe('insert', () => {
   it('should insert a doc into collection', async () => {
     const global = db.collection('ShutterSchema');
 
-    const mockSchema = {_id: 'some-id', location: 'west-hampstead'};
+    const mockSchema = {_id: 'some-id', title: 'some-title', location: 'some-location', description: 'some-description'};
     await global.insertOne(mockSchema);
 
     const insertedSchema = await global.findOne({_id: 'some-id'});
