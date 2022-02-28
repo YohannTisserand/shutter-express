@@ -11,12 +11,14 @@ main().catch(err => console.log(err));
 
 const seedDb = async () => {
   await Shuttr.deleteMany({})
-  for (let i = 0; i < 1000; i++) {
-    const random1000 = Math.floor(Math.random() * 1000);
+  for (let i = 0; i < 10; i++) {
+    const random1000 = Math.floor(Math.random() * 10);
     const shutter = new Shuttr({
       location: `${cities[random1000].city}`
     })
     await shutter.save();
   }
 }
-seedDb();
+seedDb().then(() => {
+  mongoose.connection.close();
+});
