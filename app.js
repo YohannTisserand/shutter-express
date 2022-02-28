@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const Shuttr = require('./models/shutter')
+const Shutter = require('./models/shutter')
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -10,10 +10,9 @@ app.get('/', (req, res) => {
   res.render('home')
 })
 
-app.get('/shuttr', (req, res) => {
-  const shuttr = new Shuttr({title: 'new title'})
-  shuttr.save();
-  res.send(shuttr);
+app.get('/shutter', async (req, res) => {
+  const shutters = await Shutter.find({});
+  res.render('shutter/index', { shutters })
 })
 
 module.exports = app

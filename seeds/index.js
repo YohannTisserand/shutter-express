@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Shuttr = require('../models/shutter')
+const Shutter = require('../models/shutter')
 const { places, descriptors } = require('./seedHelpers')
 const cities = require('./cities');
 
@@ -13,10 +13,10 @@ main().catch(err => console.log(err));
 const sample = array => array[Math.floor(Math.random() * array.length)]
 
 const seedDb = async () => {
-  await Shuttr.deleteMany({})
+  await Shutter.deleteMany({})
   for (let i = 0; i < 10; i++) {
     const random1000 = Math.floor(Math.random() * 10);
-    const shutter = new Shuttr({
+    const shutter = new Shutter({
       location: `${cities[random1000].city}, ${cities[random1000].state}`,
       title: `${sample(descriptors)} ${sample(places)}`
     })

@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const ShuttrSchema = new Schema({
+const ShutterSchema = new Schema({
   title: String,
   location: String,
   description: String
 })
 
-module.exports = mongoose.model('Shutter', ShuttrSchema);
+module.exports = mongoose.model('Shutter', ShutterSchema);
