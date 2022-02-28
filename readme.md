@@ -36,7 +36,6 @@ I would like to see the locations pinned on a map
 
 ### Tech Stack
 
-- JavaScript
 - Express
 - MongoDB
 - Mongoose
