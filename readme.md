@@ -41,5 +41,4 @@ I would like to see the locations pinned on a map
 - Mongoose
 - Node.js
 - HTML
-- CSS 
-- Jest
+- CSS
