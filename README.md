@@ -1,5 +1,7 @@
 <h1>Shutter</h1>
 
+APP IN PROGRESS - last updated 1/3/2022
+
 ## Planning and Approach
 ### User Stories
 

@@ -22,7 +22,7 @@ async function seedImg() {
         collections: 1114848,
       },
     })
-    return resp.data.urls.small
+    return resp.data.urls
   } catch (err) {
     console.error(err)
   }
