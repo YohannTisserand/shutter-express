@@ -34,7 +34,7 @@ So I can see where I'm heading
 I would like to see the locations pinned on a map
 ```
 
-## How to use
+## How to use
 
 ```
 $ git clone https://github.com/YohannTisserand/shutter-express.git
