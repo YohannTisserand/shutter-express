@@ -1,6 +1,8 @@
 <% layout('layouts/boilerplate') %>
 <h1><%= shutter.title %></h1>
 <h2><%= shutter.location %></h2>
+<img src="<%= shutter.image %>" alt="image">
+<p><%= shutter.description %></p>
 <p><a href="/shutter/<%= shutter._id %>/edit">Edit</a></p>
 <p>
   <form action="/shutter/<%= shutter._id %>/?_method=DELETE" method="POST">
