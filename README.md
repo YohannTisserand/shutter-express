@@ -33,6 +33,16 @@ As a wanderer
 So I can see where I'm heading 
 I would like to see the locations pinned on a map
 ```
+## How to use
+
+```
+$ git clone https://github.com/YohannTisserand/shutter-express.git
+$ cd shutter-express
+$ npm install
+```
+```
+install <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/">mongoDB</a> depending on your OS
+```
 
 ## Tech Stack
 
