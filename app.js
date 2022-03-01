@@ -3,9 +3,12 @@ const app = express();
 const path = require('path');
 const Shutter = require('./models/shutter');
 const methodOverride = require('method-override');
+const ejsMate = require('ejs-mate');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+app.engine('ejs', ejsMate);
 
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'));
