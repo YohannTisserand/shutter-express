@@ -33,6 +33,7 @@ As a wanderer
 So I can see where I'm heading 
 I would like to see the locations pinned on a map
 ```
+
 ## How to use
 
 ```
