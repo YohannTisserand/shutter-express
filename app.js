@@ -1,12 +1,14 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const Shutter = require('./models/shutter')
+const Shutter = require('./models/shutter');
+const methodOverride = require('method-override');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride('_method'));
 
 app.get('/', (req, res) => {
   res.render('home')
@@ -30,6 +32,17 @@ app.post('/shutter', async (req, res) => {
 app.get('/shutter/:id', async(req, res) => {
   const shutter = await Shutter.findById(req.params.id)
   res.render('shutter/show', { shutter })
+});
+
+app.get('/shutter/:id/edit', async (req, res) => {
+  const shutter = await Shutter.findById(req.params.id)
+  res.render('shutter/edit', { shutter })
+});
+
+app.put('/shutter/:id', async (req, res) => {
+  const { id } = req.params;
+  const shutter = await Shutter.findByIdAndUpdate(id, { ...req.body.shutter }); //spread operator
+  res.redirect(`/shutter/${shutter._id}`)
 });
 
 module.exports = app
