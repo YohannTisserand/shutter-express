@@ -42,4 +42,3 @@ I would like to see the locations pinned on a map
 - Node.js
 - HTML
 - CSS
-
