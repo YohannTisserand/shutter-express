@@ -3,8 +3,23 @@
 <div>
   <a href="/shutter/new">Add Shutter</a>
 </div>
-  <ul>
     <% for (let shutter of shutters) {%>
-      <li><a href="/shutter/<%= shutter._id %>"><%= shutter.title %></a></li>
+      <div class="card" mb-3>
+        <div class="row">
+          <div class="col-md-4">
+            <img class="img-fluid" alt="" src="<%= shutter.image %>">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title"><%= shutter.title %></h5>
+              <p class="card-text"><%= shutter.description %></p>
+              <p class="card-text">
+                <small class="text-muted"><%= shutter.location %></small>
+              </p>
+              <a class="btn btn-primary" href="/shutter/<%= shutter._id %>">View <%= shutter.title %> </a>
+            </div>
+          </div>
+        </div>
+      </div>
     <% } %>
-  </ul>
+  
