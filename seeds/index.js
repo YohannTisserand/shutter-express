@@ -18,7 +18,7 @@ async function seedImg() {
   try {
     const resp = await axios.get('https://api.unsplash.com/photos/random', {
       params: {
-        client_id: api,
+        client_id: api, //<--- YOUR API HERE
         collections: 1114848,
       },
     })
