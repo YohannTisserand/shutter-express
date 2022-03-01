@@ -37,8 +37,9 @@ I would like to see the locations pinned on a map
 ## Tech Stack
 
 - <a href="https://expressjs.com/">Express</a>
-- MongoDB
-- Mongoose
-- Node.js
-- HTML
-- CSS
+- <a href="https://www.mongodb.com/">mongoDB</a>
+- <a href="https://mongoosejs.com/">Mongoose</a>
+- <a href="https://nodejs.org/en/">Node.js</a>
+- <a href="https://en.wikipedia.org/wiki/HTML5">HTML</a>
+- <a href="https://en.wikipedia.org/wiki/CSS">CSS</a>
+- <a href="https://getbootstrap.com/">Bootstrap</a>
