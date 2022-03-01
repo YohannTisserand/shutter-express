@@ -1,6 +1,7 @@
 const app = require('./app.js')
 const PORT = process.env.PORT || 3000
 const mongoose = require('mongoose');
+const test = require('./models/shutter')
 
 app.listen(PORT, () => console.log(`Listening on port: ${PORT}`))
 

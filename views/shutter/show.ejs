@@ -1,14 +1,25 @@
 <% layout('layouts/boilerplate') %>
-<h1><%= shutter.title %></h1>
-<h2><%= shutter.location %></h2>
-<img src="<%= shutter.image %>" alt="image">
-<p><%= shutter.description %></p>
-<p><a href="/shutter/<%= shutter._id %>/edit">Edit</a></p>
-<p>
-  <form action="/shutter/<%= shutter._id %>/?_method=DELETE" method="POST">
-    <button>Delete</button>
-  </form>
-</p>
-<footer>
-  <a href="/shutter">All Shutter</a>
-</footer>
+<div class="row">
+  <div class="col-6 offset-3">
+    <div class="card mb-3">
+      <img src="<%= shutter.image %>" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= shutter.title %></h5>
+        <p class="card-text"><%= shutter.description %></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item text-muted"><%= shutter.location %></li>
+      </ul>
+      <div class="card-body">
+        <a class= "card-link btn btn-warning "href="/shutter/<%= shutter._id %>/edit">Edit</a>
+        <form class="d-inline" action="/shutter/<%= shutter._id %>/?_method=DELETE" method="POST">
+          <button class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+      <div class="card-footer text-muted">
+        <a href="/shutter">All Shutter</a>
+      </div>
+    </div>
+  </div>
+</div>
+
