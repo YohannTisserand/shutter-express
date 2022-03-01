@@ -18,7 +18,7 @@ $ git clone https://github.com/YohannTisserand/shutter-express.git
 $ cd shutter-express
 $ npm install
 ```
-install <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/">mongoDB</a> depending on your OS
+Install <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/">mongoDB</a> depending on your OS
 
 Alternatively, to get some content (that is supposed to exists already), create an account at <a href="https://unsplash.com/developers">Unsplash developers</a> and ask for an instant API <a href="https://unsplash.com/oauth/applications">here</a>, then copy paste it into the /seeds/index.js file.
 
