@@ -2,22 +2,22 @@
 <div class="row">
   <h1 class="text-center">Edit a Shutter</h1>
   <div class="col-6 offset-3">
-    <form action="/shutter/<%= shutter._id %>?_method=PUT" method="POST">
+    <form action="/shutter/<%= shutter._id %>?_method=PUT" method="POST" novalidate class="validated-from">
       <div class="mb-3">
         <label class="form-label" for="title">Title</label>
-        <input class="form-control" type="text" id="title" name="shutter[title]" value="<%= shutter.title %>">
+        <input class="form-control" type="text" id="title" name="shutter[title]" value="<%= shutter.title %>" required>
       </div>
       <div class="mb-3">
         <label class="form-label" for="location">Location</label>
-        <input class="form-control" type="text" id="location" name="shutter[location]" value="<%= shutter.location %>">
+        <input class="form-control" type="text" id="location" name="shutter[location]" value="<%= shutter.location %>" required>
       </div>
       <div class="mb-3">
         <label class="form-label" for="image">Image</label>
-        <input class="form-control" type="text" id="image" name="shutter[image]" value="<%= shutter.image %>">
+        <input class="form-control" type="text" id="image" name="shutter[image]" value="<%= shutter.image %>" required>
       </div>
       <div class="mb-3">
         <label class="form-label" for="description">Description</label>
-        <textarea class="form-control" type="text" id="description" name="shutter[description]"><%= shutter.description %></textarea>
+        <textarea class="form-control" type="text" id="description" name="shutter[description]" required><%= shutter.description %></textarea>
       </div>
       <div class="mb-3">
         <button class="btn btn-success">Update</button>

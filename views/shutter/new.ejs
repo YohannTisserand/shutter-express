@@ -2,22 +2,22 @@
 <div class="row">
   <h1 class="text-center">New Shutter</h1>
   <div class="col-6 offset-3">
-    <form action="/shutter" method="POST">
+    <form action="/shutter" method="POST" novalidate class="validated-from">
       <div class="mb-3">
         <label class="form-label" for="title">Title</label>
-        <input class="form-control" type="text" id="title" name="shutter[title]">
+        <input class="form-control" type="text" id="title" name="shutter[title]" required>
       </div>
       <div class="mb-3">
         <label class="form-label" for="location">Location</label>
-        <input class="form-control" type="text" id="location" name="shutter[location]">
+        <input class="form-control" type="text" id="location" name="shutter[location]" required>
       </div>
       <div class="mb-3">
         <label class="form-label" for="image">Image</label>
-        <input class="form-control" type="text" id="image" name="shutter[image]">
+        <input class="form-control" type="text" id="image" name="shutter[image]" required>
       </div>
       <div class="mb-3">
         <label class="form-label" for="description">Description</label>
-        <textarea class="form-control" type="text" id="description" name="shutter[description]"></textarea>
+        <textarea class="form-control" type="text" id="description" name="shutter[description]" required></textarea>
       </div>
       <div class="mb-3">
         <button class="btn btn-success">Submit</button>
