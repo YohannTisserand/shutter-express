@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 const Shutter = require('../models/shutter')
 const { places, descriptors } = require('./seedHelpers')
 const cities = require('./cities');
-const axios = require('axios')
+const axios = require('axios');
+const api = require('./api')
 
 async function main() {
   await mongoose.connect('mongodb://localhost:27017/shutter');
@@ -17,7 +18,7 @@ async function seedImg() {
   try {
     const resp = await axios.get('https://api.unsplash.com/photos/random', {
       params: {
-        client_id: 'rMCZ09ezcx3cFDD7kX9E6OR8MSTpbqEDosYe02bu6mc',
+        client_id: api,
         collections: 1114848,
       },
     })
