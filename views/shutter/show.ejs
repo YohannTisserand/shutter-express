@@ -9,8 +9,13 @@
 <body>
   <h1><%= shutter.title %></h1>
   <h2><%= shutter.location %></h2>
+  <p><a href="/shutter/<%= shutter._id %>/edit">Edit</a></p>
+  <p>
+    <form action="/shutter/<%= shutter._id %>/?_method=DELETE" method="POST">
+      <button>Delete</button>
+    </form>
+  </p>
   <footer>
-    <a href="/shutter/<%= shutter._id %>/edit">Edit</a>
     <a href="/shutter">All Shutter</a>
   </footer>
 </body>

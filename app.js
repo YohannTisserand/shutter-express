@@ -45,4 +45,10 @@ app.put('/shutter/:id', async (req, res) => {
   res.redirect(`/shutter/${shutter._id}`)
 });
 
+app.delete('/shutter/:id', async (req, res) => {
+  const { id } = req.params;
+  await Shutter.findByIdAndDelete(id);
+  res.redirect('/shutter');
+});
+
 module.exports = app
