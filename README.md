@@ -20,7 +20,7 @@ $ npm install
 ```
 Install <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/">mongoDB</a> depending on your OS
 
-Alternatively, to get some content (that is supposed to exists already), create an account at <a href="https://unsplash.com/developers">Unsplash developers</a> and ask for an instant API <a href="https://unsplash.com/oauth/applications">here</a>, then copy paste it into the /seeds/index.js file.
+Alternatively, to get some content (that is supposed to exists already(mostly random generated photos, which is the core of the app)), create an account at <a href="https://unsplash.com/developers">Unsplash developers</a> and ask for an instant API <a href="https://unsplash.com/oauth/applications">here</a>, then copy paste it into the /seeds/index.js file.
 
 ```
 nodemon server.js
