@@ -20,6 +20,12 @@ $ npm install
 ```
 install <a href="https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/">mongoDB</a> depending on your OS
 
+Alternatively, to get some content (that is supposed to exists already), create an account at <a href="https://unsplash.com/developers">Unsplash dev</a> and ask for an instant API <a href="https://unsplash.com/oauth/applications">here</a> and copy paste it into the /seeds/index.js file.
+
+```
+nodemon server.js
+```
+
 ## Tech Stack
 
 - <a href="https://expressjs.com/">Express</a>
