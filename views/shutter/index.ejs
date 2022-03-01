@@ -8,6 +8,9 @@
 </head>
 <body>
   <h1>all Shutters</h1>
+  <div>
+    <a href="/shutter/new">Add Shutter</a>
+  </div>
     <ul>
       <% for (let shutter of shutters) {%>
         <li><a href="/shutter/<%= shutter._id %>"><%= shutter.title %></a></li>

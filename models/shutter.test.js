@@ -1,4 +1,4 @@
-const shutter = require('./shutter');
+const ShutterSchema = require('./shutter');
 const {MongoClient} = require('mongodb');
 
 describe('insert', () => {
@@ -17,12 +17,12 @@ describe('insert', () => {
   });
 
   it('should insert a doc into collection', async () => {
-    const global = db.collection('Shutter');
+    const shutter = db.collection('ShutterSchema');
 
     const mockSchema = {_id: 'some-id', title: 'some-title', location: 'some-location', description: 'some-description'};
-    await global.insertOne(mockSchema);
+    await shutter.insertOne(mockSchema);
 
-    const insertedSchema = await global.findOne({_id: 'some-id'});
+    const insertedSchema = await shutter.findOne({_id: 'some-id'});
     expect(insertedSchema).toEqual(mockSchema);
   });
 });
