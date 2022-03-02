@@ -1,5 +1,5 @@
 <h1>Shutter</h1>
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/a33cf5d965dd1f24c7e7/maintainability)](https://codeclimate.com/github/YohannTisserand/shutter-express/maintainability)
 APP IN PROGRESS - last updated 2/3/2022
 
 ## Planning and Approach
