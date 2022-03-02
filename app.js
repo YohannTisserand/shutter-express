@@ -7,6 +7,7 @@ const ejsMate = require('ejs-mate');
 const catchAsync = require('./utils/catchAsync');
 const ExpressError = require('./utils/ExpressError');
 const { STATUS_CODES } = require('http');
+const { shutterSchema } = require('./schema');
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
@@ -15,6 +16,17 @@ app.engine('ejs', ejsMate);
 
 app.use(express.urlencoded({ extended: true }))
 app.use(methodOverride('_method'));
+
+const validateShutter = (req, res, next) => {
+  
+  const { error } = shutterSchema.validate(req.body)
+  if (error) {
+    const msg = error.details.map(el => el.message).join(', ')
+    throw new ExpressError(msg, 400)
+  } else {
+    next();
+  }
+}
 
 app.get('/', (req, res) => {
   res.render('home')
@@ -29,11 +41,10 @@ app.get('/shutter/new', (req, res) => {
   res.render('shutter/new');
 });
 
-app.post('/shutter', catchAsync(async (req, res, next) => {
-  if (!req.body.shutter) throw new ExpressError('Invalid data', 400);
-    const shutter = new Shutter(req.body.shutter);
-    await shutter.save();
-    res.redirect(`/shutter/${shutter._id}`)
+app.post('/shutter', validateShutter, catchAsync(async (req, res, next) => {
+  const shutter = new Shutter(req.body.shutter);
+  await shutter.save();
+  res.redirect(`/shutter/${shutter._id}`)
 }));
 
 app.get('/shutter/:id', catchAsync(async(req, res) => {
@@ -46,7 +57,7 @@ app.get('/shutter/:id/edit', catchAsync(async (req, res) => {
   res.render('shutter/edit', { shutter })
 }));
 
-app.put('/shutter/:id', catchAsync(async (req, res) => {
+app.put('/shutter/:id', validateShutter, catchAsync(async (req, res) => {
   const { id } = req.params;
   const shutter = await Shutter.findByIdAndUpdate(id, { ...req.body.shutter }); //spread operator
   res.redirect(`/shutter/${shutter._id}`)
